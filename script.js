@@ -134,3 +134,14 @@ const revealGalleryImages = () => {
 window.addEventListener('scroll', revealGalleryImages);
 window.addEventListener('load', revealGalleryImages);
 
+function openImg(src) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("imgModalContent");
+
+    modalImg.src = src;
+    modal.style.display = "flex";
+}
+
+document.getElementById("imgModal").addEventListener("click", () => {
+    document.getElementById("imgModal").style.display = "none";
+});

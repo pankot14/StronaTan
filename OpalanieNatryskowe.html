@@ -12,19 +12,35 @@
         <a href="#dlaczego">Dlaczego?</a>
         <a href="#galeria">Efekty</a>
         <a href="#zabieg">Jak wygląda zabieg?</a>
-        <a href="#cennik">Cennik</a>
+        <a href="#cennik">Cennik usług</a>
         <a href="#faq">FAQ</a>
         <a href="#rezerwacja">Rezerwacja</a>
     </nav>
 </article>
 
 <header class="hero">
-    <div class="hero-inner">
-        <h1>GlowTan – opalanie natryskowe</h1>
-        <p>Bezpieczna, naturalna opalenizna bez promieniowania UV.</p>
-        <a href="#rezerwacja" class="hero-btn">Umów wizytę</a>
+
+    <div class="hero-left">
+        <img src="spec1.jpg" alt="Specjalistka Daria" class="spec-img" onclick="openImg(this.src)">
+
+
+
+        <div class="spec-desc">
+            <h2>Nasza specjalistka</h2>
+            <p>
+                Nazywam się <strong>Daria Dąbrowska</strong> od niedawna zajmuję się opalaniem natryskowym. Dbam o idealny dobór odcienia, równomierną aplikację
+                oraz najwyższy komfort każdej klientki.
+            </p>
+        </div>
     </div>
+
+    <div class="hero-right">
+        <h1>Opalanie Natryskowe Daria</h1>
+        <p>Naturalny efekt, indywidualnie dobrany odcień i pełne bezpieczeństwo dla skóry.</p>
+    </div>
+
 </header>
+
 
 <main>
 
@@ -70,9 +86,9 @@
     <h2>Efekty</h2>
     <p class="section-subtitle">Przykładowe efekty opalania natryskowego.</p>
     <div class="gallery">
-        <img src="OPNA1.jpg" alt="Efekt opalania natryskowego 1">
-        <img src="OPNA2.jpg" alt="Efekt opalania natryskowego 2">
-        <img src="OPNA3.jpg" alt="Efekt opalania natryskowego 3">
+        <img src="DA1.jpg" alt="Efekt opalania natryskowego 1" class="spec-img" onclick="openImg(this.src)">
+        <img src="DA2.jpg" alt="Efekt opalania natryskowego 2" class="spec-img" onclick="openImg(this.src)">
+        <img src="DA3.jpg" alt="Efekt opalania natryskowego 3" class="spec-img" onclick="openImg(this.src)">
     </div>
 </section>
 
@@ -81,7 +97,8 @@
     <div class="panel-content">
         <ol class="steps-list">
             <li><strong>Konsultacja:</strong> dobór odcienia, intensywności i oczekiwanego efektu.</li>
-            <li><strong>Przygotowanie skóry:</strong> zalecany peeling dzień wcześniej, skóra sucha w dniu zabiegu.</li>
+            <li><strong>Przygotowanie skóry:</strong> zalecany peeling <strong>beztłuszczowy</strong> dzień wcześniej, skóra sucha w dniu zabiegu.<br> Także przed zabiegiem <strong>nie</strong> należy używać antyperspirantów</li>
+            <li><strong>Ubiór:</strong> Zalecane są ciemne ubrania np. długie luźne spodnie i luźna koszulka na rękawki.</li>
             <li><strong>Aplikacja mgiełki DHA:</strong> specjalna mgiełka z <a class="ref-link-inline" href="https://pl.wikipedia.org/wiki/Dihydroksyaceton" target="_blank">DHA (dihydroksyaceton)</a> równomiernie rozpylana na skórę.</li>
             <li><strong>Schnięcie:</strong> kilka minut, po czym można się delikatnie ubrać.</li>
             <li><strong>Rozwój koloru:</strong> pełny efekt po 6–8 godzinach.</li>
@@ -95,24 +112,33 @@
     </div>
 </section>
 
-<section id="cennik" class="section panel-soft">
-    <h2>Cennik</h2>
-    <div class="price-table">
-        <div class="price-item">
-            <h3>Całe ciało</h3>
-            <p class="price">120 zł</p>
-            <p>Idealne przed ważnymi wydarzeniami.</p>
-        </div>
-        <div class="price-item">
-            <h3>Połówka ciała</h3>
-            <p class="price">80 zł</p>
-            <p>Góra lub dół – w zależności od potrzeb.</p>
-        </div>
-        <div class="price-item">
-            <h3>Pakiet ślubny</h3>
-            <p class="price">200 zł</p>
-            <p>Próba + zabieg przed ślubem.</p>
-        </div>
+<section class="cennik">
+    <h2>Cennik Usług</h2>
+
+    <div class="cennik-box">
+        <h3>Zabieg opalania natryskowego</h3>
+        <p class="cena">120 zł</p>
+        <p>Profesjonalny zabieg wykonywany <Strong>wyłącznie</Strong> z dojazdem do klienta.</p>
+    </div>
+
+    <div class="cennik-box">
+        <h3>Dojazd do klienta</h3>
+
+        <h4>Białystok</h4>
+        <p class="cena">20 zł</p>
+        <p>Stała opłata za dojazd w granicach miasta.</p>
+
+        <h4>Poza Białymstokiem</h4>
+        <p class="cena">1,50 zł / km</p>
+    </div>
+
+    <div class="cennik-box">
+        <h3>Przykładowe wyceny</h3>
+        <ul>
+            <li>Zabieg w Białymstoku: <strong>140 zł</strong></li>
+            <li>10 km od Białegostoku: <strong>135 zł</strong></li>
+            <li>25 km od Białegostoku: <strong>157,50 zł</strong></li>
+        </ul>
     </div>
 </section>
 
@@ -137,17 +163,22 @@
     </div>
 </section>
 
-<section id="rezerwacja" class="section panel-strong">
-    <h2>Rezerwacja</h2>
-    <div class="booksy-box">
-        <p>Chcesz umówić wizytę szybko i wygodnie?</p>
-        <p><strong>Rezerwuj przez Booksy!</strong></p>
-        <a href="https://booksy.com" target="_blank" class="booksy-btn">Przejdź do Booksy</a>
+<section id="rezerwacja" class="rezerwacja">
+    <h2>Rezerwuj</h2>
+
+    <div class="rezerwacja-box">
+        <ul>
+            <li><strong>Telefonicznie:</strong> <a href="tel:+48XXXXXXXXX">+48 XXX XXX XXX</a></li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/twojinstagram" target="_blank">@twojinstagram</a></li>
+        </ul>
     </div>
 </section>
 
-</main>
 
+</main>
+<div id="imgModal" class="img-modal" onclick="closeImg()">
+    <img id="imgModalContent">
+</div>
 <script src="script.js"></script>
 </body>
 </html>

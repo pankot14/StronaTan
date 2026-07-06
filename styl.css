@@ -10,41 +10,153 @@ body {
     color: #3b2a22;
 }
 
-/* HERO */
-
+/*HERO – TŁO I PODSTAWOWY STYL */
 .hero {
-    background:
-        linear-gradient(rgba(40, 25, 15, 0.65), rgba(40, 25, 15, 0.65)),
-        url('hero.jpg') center/cover no-repeat;
-    padding: 140px 40px;
-    color: #fffdf8;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url('hero.jpg') center/cover no-repeat;
+    padding: 120px 40px;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
-.hero-inner {
-    max-width: 900px;
-    margin-left: auto;
+/* LEWA STRONA: ZDJĘCIE + OPIS SPECJALISTKI*/
+.hero-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 45%;
+}
+
+/* Zdjęcie specjalistki — kwadratowe*/
+.spec-img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    border: 3px solid rgba(255,255,255,0.6);
+}
+
+/* Opis specjalistki */
+.spec-desc h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    color: #ffd9a6;
+}
+
+.spec-desc p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*PRAWA STRONA: OPALANIE NATRYSKOWE*/
+.hero-right {
+    max-width: 45%;
     text-align: right;
 }
 
-.hero h1 {
+.hero-right h1 {
     font-size: 42px;
     margin-bottom: 10px;
+    color: #ffd9a6;
 }
 
-.hero p {
+.hero-right p {
     font-size: 18px;
-    margin-bottom: 20px;
 }
 
-.hero-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #d8a86d;
-    color: white;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
+/* ===== RESPONSYWNOŚĆ ===== */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-left {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
+/* Ustawienie dwóch bloków obok siebie */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 40px;
+    color: white;
+}
+
+/* Lewy blok – Twój obecny tekst */
+.hero-content {
+    max-width: 50%;
+}
+
+/* Prawy blok – zdjęcie + opis */
+.hero-specialist {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Zdjęcie specjalistki */
+.hero-specialist img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.6);
+}
+
+/* Opis specjalistki */
+.hero-desc h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #ffd9a6;
+}
+
+.hero-desc p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-specialist {
+        max-width: 100%;
+    }
+
+    .hero-specialist {
+        flex-direction: column;
+    }
+}
+
 
 /* TOP NAV */
 
@@ -279,25 +391,47 @@ body {
     margin-bottom: 6px;
 }
 
-/* BOOKSY */
+/* rezerwacja */
 
-.booksy-box {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 14px;
-    padding: 24px;
+.rezerwacja {
+    padding: 60px 40px;
     text-align: center;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
 
-.booksy-btn {
+.rezerwacja h2 {
+    font-size: 36px;
+    color: #d88a3b; /* Twój złoto-brązowy kolor */
+    margin-bottom: 20px;
+}
+
+.rezerwacja-box {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
     display: inline-block;
-    margin-top: 12px;
-    background: #d8a86d;
-    padding: 10px 24px;
-    color: white;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.rezerwacja-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rezerwacja-box li {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.rezerwacja-box a {
+    color: #ffd9a6; /* pastelowe złoto jak „Twoja specjalistka” */
     text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
+}
+
+.rezerwacja-box a:hover {
+    text-decoration: underline;
 }
 
 /* ANIMACJE SEKCJI */
@@ -311,4 +445,96 @@ body {
 .section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+.cennik {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cennik h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.cennik-box {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.cennik-box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.cennik-box h4 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.cena {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d88a3b;
+}
+
+.cennik-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.cennik-box ul li {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+a {
+    color: #d88a3b; /* Twój kolor przewodni */
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    background: rgba(216, 138, 59, 0.15); /* delikatne złote podświetlenie */
+    color: #000; /* lekka zmiana koloru tekstu */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15); /* miękki cień */
+    transform: translateY(-2px); /* subtelne uniesienie */
+}
+/* Powiększone zdjęcie – modal */
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.img-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    animation: zoomIn 0.25s ease;
+}
+
+/* Animacja wejścia */
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+#rezerwacja {
+    padding-bottom: 400px; 
 }
