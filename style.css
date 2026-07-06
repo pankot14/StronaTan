@@ -423,7 +423,12 @@ body {
 .cennik {
     padding: 60px 40px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
+
 
 .cennik h2 {
     font-size: 36px;
@@ -436,10 +441,12 @@ body {
     padding: 25px;
     border-radius: 16px;
     backdrop-filter: blur(4px);
-    display: inline-block;
-    text-align: left;
     box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+
+    width: 320px; 
+    text-align: left;
 }
+
 
 .cennik-box h3 {
     margin-bottom: 10px;
@@ -516,7 +523,7 @@ a:hover {
 @media (max-width: 600px) {
 
     body {
-        font-size: 18px; /* było ~14px, teraz czytelne */
+        font-size: 18px; 
         line-height: 1.6;
     }
 
@@ -550,30 +557,34 @@ a:hover {
     }
 }
 @media (max-width: 600px) {
-
-    .cennik-box table {
+    .cennik {
+        padding: 40px 20px;
         display: block;
+    }
+
+    .cennik-box {
         width: 100%;
+        margin-bottom: 25px;
+        padding: 20px;
     }
 
-    .cennik-box tr {
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        margin-bottom: 15px;
-        background: rgba(255,255,255,0.08);
-        border-radius: 12px;
+    .cennik h2 {
+        font-size: 28px;
     }
 
-    .cennik-box th {
-        display: none; /* ukrywamy nagłówki tabeli */
+    .cennik-box h3 {
+        font-size: 22px;
     }
 
-    .cennik-box td {
-        padding: 6px 0;
+    .cennik-box h4 {
         font-size: 18px;
     }
+
+    .cena {
+        font-size: 20px;
+    }
 }
+
 @media (max-width: 600px) {
     section {
         padding: 50px 20px;
