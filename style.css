@@ -420,6 +420,17 @@ body {
     transform: translateY(0);
 }
 /* cennik */
+.slide-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .cennik {
     padding: 60px 40px;
     text-align: center;
