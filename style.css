@@ -512,3 +512,82 @@ a:hover {
 #rezerwacja {
     padding-bottom: 400px; 
 }
+/* === TELEFONY (małe ekrany) === */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 18px; /* było ~14px, teraz czytelne */
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p, li {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .spec-img {
+        width: 200px;
+        height: auto;
+    }
+}
+@media (max-width: 600px) {
+
+    .cennik-box table {
+        display: block;
+        width: 100%;
+    }
+
+    .cennik-box tr {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-bottom: 15px;
+        background: rgba(255,255,255,0.08);
+        border-radius: 12px;
+    }
+
+    .cennik-box th {
+        display: none; /* ukrywamy nagłówki tabeli */
+    }
+
+    .cennik-box td {
+        padding: 6px 0;
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px) {
+    section {
+        padding: 50px 20px;
+    }
+}
+@media (max-width: 600px) {
+    .faq-item {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px) {
+    .rezerwacja-box {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
