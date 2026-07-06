@@ -428,7 +428,13 @@ body {
     gap: 30px;
     justify-content: center;
 }
-
+.cennik-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
 
 .cennik h2 {
     font-size: 36px;
