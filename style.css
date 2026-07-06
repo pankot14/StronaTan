@@ -434,10 +434,6 @@ body {
 .cennik {
     padding: 60px 40px;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
 }
 .cennik-box-container {
     display: flex;
