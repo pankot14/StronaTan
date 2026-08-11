@@ -704,7 +704,7 @@ a:hover {
 .discount-floating .discount-inner strong { display:block; font-size:18px; color:#b55a18; }
 .discount-floating .discount-inner span { display:block; font-weight:600; font-size:13px; margin-top:6px; color:#5a3826; }
 
-.discount-floating:hover { transform: translateX(6px); box-shadow: 0 18px 40px rgba(0,0,0,0.22); }
+
 
 @media (max-width: 900px) {
     .discount-floating { position: fixed; bottom: 20px; top: auto; right: 16px; left: auto; width: calc(100% - 32px); transform: translateX(0); }
