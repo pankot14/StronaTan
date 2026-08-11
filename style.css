@@ -9,7 +9,12 @@ body {
     background: #fff7f1;
     color: #3b2a22;
 }
-
+.discount-floating {
+    position: fixed;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+}
 /*HERO – TŁO I PODSTAWOWY STYL */
 .hero {
     background: linear-gradient(
