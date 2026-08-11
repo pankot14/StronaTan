@@ -702,23 +702,19 @@ a:hover {
 .discount-floating:hover { transform: translateY(-4px) rotate(-6deg); box-shadow: 0 18px 40px rgba(0,0,0,0.22); }
 
 /* Hero badge (smaller, inline) */
-.discount-badge {
-    margin-left: auto;
-    margin-top: 20px;
-    background: linear-gradient(90deg,#fff9ef,#ffe7cf);
-    color:#3b2a22;
-    padding:12px 18px;
-    border-radius:12px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.12);
-    text-align:right;
-    max-width:320px;
-    align-self: flex-start;
+.discount-fixed {
+    position: fixed;
+    top: 110px;
+    right: 24px;
+    width: 260px;
+    transform: none !important;
+    z-index: 9999;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    transition: transform 0.2s ease, right 0.2s ease, top 0.2s ease;
+    pointer-events: auto;
 }
-
-.discount-badge .discount-inner strong { font-size:18px; color:#b55a18; display:block; }
-.discount-badge .discount-inner p { font-size:14px; margin-top:6px; color:#5a3826; margin:0; }
 
 @media (max-width: 900px) {
     .discount-floating { position: static; transform: none; margin: 10px auto 0; }
-    .discount-badge { max-width:100%; margin: 16px 0 0 0; align-self: center; text-align:center; }
+    .discount-fixed { position: fixed; bottom: 20px; top: auto; right: auto; left: 50%; transform: translateX(-50%); width: calc(100% - 40px); }
 }

@@ -54,6 +54,19 @@ function onScroll() {
         }
     }
 
+    // discount follow behavior: make .discount-floating fixed when user scrolls through cennik
+    const discount = document.querySelector('.discount-floating');
+    const cennik = document.querySelector('.cennik');
+    if (discount && cennik) {
+        const r = cennik.getBoundingClientRect();
+        // when cennik is scrolled near top and still has space below, fix the discount to viewport
+        if (r.top < 140 && r.bottom > 220) {
+            discount.classList.add('discount-fixed');
+        } else {
+            discount.classList.remove('discount-fixed');
+        }
+    }
+
     lastScroll = current;
     ticking = false;
 }
