@@ -21,7 +21,7 @@
 <header class="hero">
 
     <div class="hero-left">
-        <img src="spec1.jpg" alt="Specjalistka Daria" class="spec-img" onclick="openImg(this.src)">
+        <img loading="lazy" src="spec1.jpg" alt="Specjalistka Daria" class="spec-img" onclick="openImg(this.src)">
 
 
 
@@ -37,6 +37,13 @@
     <div class="hero-right">
         <h1>Opalanie Natryskowe Daria</h1>
         <p>Naturalny efekt, indywidualnie dobrany odcień i pełne bezpieczeństwo dla skóry.</p>
+    </div>
+
+    <div class="discount-badge" aria-hidden="true">
+        <div class="discount-inner">
+            <strong>-10% NA OPALANIE</strong>
+            <p>Oferta ważna do końca września — przy rezerwacji podaj kod: WRZESIEN10</p>
+        </div>
     </div>
 
 </header>
@@ -86,9 +93,9 @@
     <h2>Efekty</h2>
     <p class="section-subtitle">Przykładowe efekty opalania natryskowego.</p>
     <div class="gallery">
-        <img src="DA1.jpg" alt="Efekt opalania natryskowego 1" class="spec-img" onclick="openImg(this.src)">
-        <img src="DA2.jpg" alt="Efekt opalania natryskowego 2" class="spec-img" onclick="openImg(this.src)">
-        <img src="DA3.jpg" alt="Efekt opalania natryskowego 3" class="spec-img" onclick="openImg(this.src)">
+        <img loading="lazy" src="DA1.jpg" alt="Efekt opalania natryskowego 1" class="spec-img" onclick="openImg(this.src)">
+        <img loading="lazy" src="DA2.jpg" alt="Efekt opalania natryskowego 2" class="spec-img" onclick="openImg(this.src)">
+        <img loading="lazy" src="DA3.jpg" alt="Efekt opalania natryskowego 3" class="spec-img" onclick="openImg(this.src)">
     </div>
 </section>
 
@@ -124,23 +131,19 @@
         </div>
 
         <div class="cennik-box slide-in">
-            <h3>Dojazd do klienta</h3>
-
-            <h4>Białystok</h4>
-            <p class="cena">20 zł</p>
-            <p>Stała opłata za dojazd w granicach miasta.</p>
-
-            <h4>Poza Białymstokiem</h4>
-            <p class="cena">1,50 zł / km</p>
-        </div>
-
-        <div class="cennik-box slide-in">
             <h3>Przykładowe wyceny</h3>
             <ul>
                 <li>Zabieg w Białymstoku: <strong>140 zł</strong></li>
                 <li>10 km od Białegostoku: <strong>135 zł</strong></li>
                 <li>25 km od Białegostoku: <strong>157,50 zł</strong></li>
             </ul>
+        </div>
+
+        <div class="discount-floating" aria-hidden="true">
+            <div class="discount-inner">
+                <strong>-10% RABAT</strong>
+                <span>na opalanie do końca września</span>
+            </div>
         </div>
 
     </div>
