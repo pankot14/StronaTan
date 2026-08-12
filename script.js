@@ -86,6 +86,95 @@ if (prefersReduced) {
     });
 }
 
+// FAQ accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const button = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!button || !answer) return;
+
+    const setExpanded = (expanded) => {
+        item.classList.toggle('active', expanded);
+        button.setAttribute('aria-expanded', String(expanded));
+        answer.hidden = !expanded;
+    };
+
+    if (item.classList.contains('active')) {
+        setExpanded(true);
+    } else {
+        setExpanded(false);
+    }
+
+    button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+
+        faqItems.forEach(otherItem => {
+            const otherButton = otherItem.querySelector('.faq-question');
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            if (!otherButton || !otherAnswer) return;
+            otherItem.classList.remove('active');
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherAnswer.hidden = true;
+        });
+
+        setExpanded(!isOpen);
+    });
+});
+
+// Google review slider
+const reviewSlides = document.querySelectorAll('.review-slide');
+const reviewDots = document.querySelectorAll('.dot');
+const prevButton = document.querySelector('.review-arrow.prev');
+const nextButton = document.querySelector('.review-arrow.next');
+
+let reviewIndex = 0;
+let reviewTimer = null;
+
+function showReview(nextIndex) {
+    if (!reviewSlides.length) return;
+
+    reviewIndex = (nextIndex + reviewSlides.length) % reviewSlides.length;
+
+    reviewSlides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === reviewIndex);
+    });
+
+    reviewDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === reviewIndex);
+    });
+}
+
+function startReviewAutoplay() {
+    if (!reviewSlides.length) return;
+
+    clearInterval(reviewTimer);
+    reviewTimer = setInterval(() => {
+        showReview(reviewIndex + 1);
+    }, 5000);
+}
+
+if (reviewSlides.length) {
+    showReview(0);
+    startReviewAutoplay();
+
+    prevButton?.addEventListener('click', () => {
+        showReview(reviewIndex - 1);
+        startReviewAutoplay();
+    });
+
+    nextButton?.addEventListener('click', () => {
+        showReview(reviewIndex + 1);
+        startReviewAutoplay();
+    });
+
+    reviewDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showReview(index);
+            startReviewAutoplay();
+        });
+    });
+}
+
 // Expose openImg globally so onclick="openImg(this.src)" still works in HTML
 window.openImg = openImg;
 window.closeImg = closeImg;
